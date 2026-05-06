@@ -1,0 +1,398 @@
+{
+  "videos": [
+    {
+      "id": 1778011386064,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "author": "تلاوة خاشعة",
+      "description": "تجربة المقطع رقم 1 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "376",
+      "comments": "26",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386065,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "author": "قرآن كريم",
+      "description": "تجربة المقطع رقم 2 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "126",
+      "comments": "27",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386066,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "author": "تلاوة خاشعة",
+      "description": "تجربة المقطع رقم 3 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "662",
+      "comments": "88",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386067,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "author": "قرآن كريم",
+      "description": "تجربة المقطع رقم 4 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "153",
+      "comments": "95",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386068,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+      "author": "تلاوة خاشعة",
+      "description": "تجربة المقطع رقم 5 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "921",
+      "comments": "34",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386069,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "author": "قرآن كريم",
+      "description": "تجربة المقطع رقم 6 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "61",
+      "comments": "47",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386070,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+      "author": "تلاوة خاشعة",
+      "description": "تجربة المقطع رقم 7 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "933",
+      "comments": "91",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386071,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "author": "قرآن كريم",
+      "description": "تجربة المقطع رقم 8 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "854",
+      "comments": "2",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386072,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+      "author": "تلاوة خاشعة",
+      "description": "تجربة المقطع رقم 9 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "588",
+      "comments": "75",
+      "shares": "0"
+    },
+    {
+      "id": 1778011386073,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "author": "قرآن كريم",
+      "description": "تجربة المقطع رقم 10 للتمرير - (استبدل هذه المقاطع لاحقاً بمقاطعك الدينية)",
+      "source": "all",
+      "likes": "679",
+      "comments": "69",
+      "shares": "0"
+    },
+    {
+      "id": 1,
+      "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "author": "@quran_recitation",
+      "description": "تلاوة هادئة تريح القلب 🤍 سور مختارة #قرآن #تلاوة #اسلام",
+      "source": "deentok",
+      "platform": "deentok",
+      "likes": "124K",
+      "comments": "3.2K",
+      "shares": "15K"
+    },
+    {
+      "id": 2,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+      "author": "@islamic_reminders",
+      "description": "أجمل دعاء في يوم الجمعة المبارك ✨ دعاء مستجاب بإذن الله #دعاء #الجمعة",
+      "source": "youtube",
+      "platform": "youtube",
+      "likes": "89K",
+      "comments": "1.1K",
+      "shares": "8K"
+    },
+    {
+      "id": 3,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+      "author": "@hadith_daily",
+      "description": "حديث شريف عن فضل الصدقة والتصدق 💚 شارك لتعم الفائدة #حديث #صدقة",
+      "source": "instagram",
+      "platform": "instagram",
+      "likes": "45K",
+      "comments": "800",
+      "shares": "5K"
+    },
+    {
+      "id": 4,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "author": "@quran_kareem",
+      "description": "سورة الملك كاملة بصوت عذب 🎧 استمع وأنت نائم #سورة_الملك #قرآن_كريم",
+      "source": "tiktok",
+      "platform": "tiktok",
+      "likes": "230K",
+      "comments": "5.1K",
+      "shares": "22K"
+    },
+    {
+      "id": 5,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "author": "@islamic_wisdom",
+      "description": "حكمة اليوم: من ترك شيئاً لله عوضه الله خيراً منه 🌟 #حكمة #إسلام",
+      "source": "facebook",
+      "platform": "facebook",
+      "likes": "67K",
+      "comments": "2.3K",
+      "shares": "12K"
+    },
+    {
+      "id": 6,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      "author": "@deen_reminder",
+      "description": "أذكار الصباح والمساء 📿 حصّن نفسك كل يوم #أذكار #تحصين #ذكر_الله",
+      "source": "twitter",
+      "platform": "twitter",
+      "likes": "33K",
+      "comments": "900",
+      "shares": "7K"
+    },
+    {
+      "id": 7,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+      "author": "@quran_recitation",
+      "description": "مقطع ثاني للتجربة الجميلة 🤍 #قرآن",
+      "source": "youtube",
+      "platform": "youtube",
+      "likes": "124K",
+      "comments": "3.2K",
+      "shares": "15K"
+    },
+    {
+      "id": 8,
+      "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "author": "@islamic_reminders",
+      "description": "قصة مؤثرة جدا ✨ #قصص",
+      "source": "tiktok",
+      "platform": "tiktok",
+      "likes": "89K",
+      "comments": "1.1K",
+      "shares": "8K"
+    },
+    {
+      "id": 9,
+      "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "author": "@hadith_daily",
+      "description": "حديث يغير نظرتك للحياة 💚  #حديث",
+      "source": "instagram",
+      "platform": "instagram",
+      "likes": "45K",
+      "comments": "800",
+      "shares": "5K"
+    }
+  ],
+  "users": [
+    {
+      "id": 1778008877526,
+      "username": "وائل جبر",
+      "email": "wailgabr134@gmail.com",
+      "password": "$2b$10$hyPwGM33WEQK5.ce0xzoGuEcIbeIF2RPLggrFELnw2RcZW3mLdoi2",
+      "provider": "Google",
+      "createdAt": "2026-05-05T19:21:17.705Z",
+      "avatar": "https://ui-avatars.com/api/?name=wailgabr134&background=00d26a&color=fff&bold=true",
+      "bio": "مبرمج"
+    }
+  ],
+  "loginEvents": [
+    {
+      "recordId": 1778006041952,
+      "timestamp": "2026-05-05T18:34:01.952Z",
+      "accountInfo": {
+        "id": 1778006041078,
+        "username": "wailgabr129",
+        "email": "wailgabr129@gmail.com"
+      },
+      "userContent": {
+        "interests": [
+          "lectures"
+        ]
+      },
+      "usageData": {
+        "loginTime": "2026-05-05T18:34:01.914Z",
+        "loginCount": 3
+      },
+      "technicalData": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+        "platform": "Linux x86_64",
+        "language": "ar-AE",
+        "screenResolution": "1920x1080",
+        "windowSize": "1890x928"
+      },
+      "locationData": {
+        "ip": "209.198.132.212",
+        "network": "209.198.132.128/25",
+        "version": "IPv4",
+        "city": "Aden",
+        "region": "Aden",
+        "region_code": "AD",
+        "country": "YE",
+        "country_name": "Yemen",
+        "country_code": "YE",
+        "country_code_iso3": "YEM",
+        "country_capital": "Sanaa",
+        "country_tld": ".ye",
+        "continent_code": "AS",
+        "in_eu": false,
+        "postal": "",
+        "latitude": 12.77944,
+        "longitude": 45.03667,
+        "timezone": "Asia/Aden",
+        "utc_offset": "+0300",
+        "country_calling_code": "+967",
+        "currency": "YER",
+        "currency_name": "Rial",
+        "languages": "ar-YE",
+        "country_area": 527970,
+        "country_population": 28498687,
+        "asn": "AS14593",
+        "org": "Space Exploration Technologies Corporation"
+      }
+    },
+    {
+      "recordId": 1778005683795,
+      "timestamp": "2026-05-05T18:28:03.795Z",
+      "accountInfo": {
+        "id": 1778005683012,
+        "username": "wailgabr129",
+        "email": "wailgabr129@gmail.com"
+      },
+      "userContent": {
+        "interests": []
+      },
+      "usageData": {
+        "loginTime": "2026-05-05T18:28:03.761Z",
+        "loginCount": 2
+      },
+      "technicalData": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+        "platform": "Linux x86_64",
+        "language": "ar-AE",
+        "screenResolution": "1920x1080",
+        "windowSize": "1890x928"
+      },
+      "locationData": {
+        "ip": "209.198.132.212",
+        "network": "209.198.132.128/25",
+        "version": "IPv4",
+        "city": "Aden",
+        "region": "Aden",
+        "region_code": "AD",
+        "country": "YE",
+        "country_name": "Yemen",
+        "country_code": "YE",
+        "country_code_iso3": "YEM",
+        "country_capital": "Sanaa",
+        "country_tld": ".ye",
+        "continent_code": "AS",
+        "in_eu": false,
+        "postal": "",
+        "latitude": 12.77944,
+        "longitude": 45.03667,
+        "timezone": "Asia/Aden",
+        "utc_offset": "+0300",
+        "country_calling_code": "+967",
+        "currency": "YER",
+        "currency_name": "Rial",
+        "languages": "ar-YE",
+        "country_area": 527970,
+        "country_population": 28498687,
+        "asn": "AS14593",
+        "org": "Space Exploration Technologies Corporation"
+      }
+    },
+    {
+      "recordId": 1778004218612,
+      "timestamp": "2026-05-05T18:03:38.612Z",
+      "accountInfo": {
+        "id": 1778004217410,
+        "username": "wailgabr129",
+        "email": "wailgabr129@gmail.com"
+      },
+      "userContent": {
+        "interests": []
+      },
+      "usageData": {
+        "loginTime": "2026-05-05T18:03:38.529Z",
+        "loginCount": 1
+      },
+      "technicalData": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+        "platform": "Linux x86_64",
+        "language": "ar-AE",
+        "screenResolution": "1920x1080",
+        "windowSize": "1890x928"
+      },
+      "locationData": {
+        "ip": "209.198.132.212",
+        "network": "209.198.132.128/25",
+        "version": "IPv4",
+        "city": "Aden",
+        "region": "Aden",
+        "region_code": "AD",
+        "country": "YE",
+        "country_name": "Yemen",
+        "country_code": "YE",
+        "country_code_iso3": "YEM",
+        "country_capital": "Sanaa",
+        "country_tld": ".ye",
+        "continent_code": "AS",
+        "in_eu": false,
+        "postal": "",
+        "latitude": 12.77944,
+        "longitude": 45.03667,
+        "timezone": "Asia/Aden",
+        "utc_offset": "+0300",
+        "country_calling_code": "+967",
+        "currency": "YER",
+        "currency_name": "Rial",
+        "languages": "ar-YE",
+        "country_area": 527970,
+        "country_population": 28498687,
+        "asn": "AS14593",
+        "org": "Space Exploration Technologies Corporation"
+      }
+    },
+    {
+      "recordId": 1777987281003,
+      "timestamp": "2026-05-05T13:21:21.003Z",
+      "accountInfo": {
+        "username": "TestUser",
+        "email": "test@example.com"
+      },
+      "userContent": {
+        "interests": [
+          "quran"
+        ]
+      },
+      "usageData": {
+        "loginTime": "2023-10-10T10:00:00Z",
+        "loginCount": 1
+      },
+      "technicalData": {
+        "userAgent": "curl"
+      },
+      "locationData": {
+        "country": "US"
+      }
+    }
+  ]
+}

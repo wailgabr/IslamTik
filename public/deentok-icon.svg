@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d26a"/>
+      <stop offset="100%" style="stop-color:#00e876"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#ffb800"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00d26a" flood-opacity="0.4"/>
+    </filter>
+    <filter id="starGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffd700" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Outer ring glow -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#glow)" stroke-width="3" opacity="0.3"/>
+  <!-- Crescent Moon -->
+  <g filter="url(#shadow)">
+    <path d="M 300 120 
+             A 140 140 0 1 0 300 390
+             A 100 100 0 1 1 300 120 Z" 
+          fill="url(#glow)" opacity="0.9"/>
+  </g>
+  <!-- Play Button Triangle -->
+  <g filter="url(#shadow)">
+    <polygon points="230,195 230,330 330,262" fill="url(#gold)" opacity="0.95"/>
+  </g>
+  <!-- Star 1 -->
+  <g filter="url(#starGlow)">
+    <polygon points="170,140 175,155 190,155 178,164 183,179 170,170 157,179 162,164 150,155 165,155" fill="url(#gold)" opacity="0.8"/>
+  </g>
+  <!-- Star 2 -->
+  <g filter="url(#starGlow)">
+    <polygon points="380,180 383,190 393,190 385,196 388,206 380,200 372,206 375,196 367,190 377,190" fill="url(#gold)" opacity="0.6"/>
+  </g>
+  <!-- Star 3 -->
+  <g filter="url(#starGlow)">
+    <polygon points="150,350 153,358 161,358 155,363 157,371 150,366 143,371 145,363 139,358 147,358" fill="url(#gold)" opacity="0.5"/>
+  </g>
+</svg>

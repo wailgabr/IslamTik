@@ -1,0 +1,20 @@
+{
+  "name": "Islam Tok Platform",
+  "short_name": "Islam Tok",
+  "description": "منصة المحتوى النقي - Pure Islamic Content Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#00d26a",
+  "orientation": "portrait",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/deentok-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

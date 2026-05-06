@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - الحسابات</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f4f9; margin: 0; }
+    .card { background: white; width: 450px; border-radius: 28px; padding: 36px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); box-sizing: border-box; text-align: center; }
+    .logo { width: 48px; height: 48px; margin-bottom: 24px; }
+    h1 { font-size: 24px; font-weight: 400; margin: 0 0 10px; color: #1f1f1f; }
+    p.subtitle { font-size: 16px; color: #444746; margin: 0 0 30px; }
+    
+    .account-list { text-align: right; border-top: 1px solid #dadce0; margin-bottom: 20px; }
+    .account-item { display: flex; align-items: center; padding: 12px 10px; border-bottom: 1px solid #dadce0; cursor: pointer; transition: background 0.2s; border-radius: 8px; margin-top:2px; }
+    .account-item:hover { background: #f8f9fa; }
+    .avatar { width: 36px; height: 36px; border-radius: 50%; margin-left: 12px; background: #00796b; color: white; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; }
+    .acc-details { flex: 1; text-align:left; direction:ltr; }
+    .acc-name { font-size: 14px; font-weight: 500; color: #3c4043; margin: 0; }
+    .acc-email { font-size: 13px; color: #5f6368; margin: 0; }
+    
+    .add-account { display: flex; align-items: center; padding: 12px 10px; cursor: pointer; color: #3c4043; font-size: 14px; font-weight: 500; border-bottom: 1px solid #dadce0; }
+    .icon-add { margin-left: 14px; color: #5f6368; font-size: 20px; width: 32px; text-align: center; }
+    
+    .consent-view { display: none; text-align: center; }
+    .actions { display: flex; justify-content: space-between; margin-top: 40px; }
+    .btn { padding: 10px 24px; font-size: 14px; font-weight: 500; border-radius: 20px; cursor: pointer; border: none; }
+    .btn-cancel { background: transparent; color: #0b57d0; }
+    .btn-cancel:hover { background: #f0f4f9; }
+    .btn-confirm { background: #0b57d0; color: white; }
+    .btn-confirm:hover { background: #0842a0; }
+  </style>
+</head>
+<body>
+  <!-- Step 1: Account Chooser -->
+  <div class="card" id="step1">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="logo" alt="Google">
+    <h1>تسجيل الدخول باستخدام حساب Google</h1>
+    <p class="subtitle">المتابعة إلى <strong>إسلام تيك Platform</strong></p>
+    
+    <div class="account-list">
+      <div class="account-item" onclick="selectAccount('wailgabr134@gmail.com', 'Wail Gabr')">
+        <div class="avatar" style="background:#0f9d58;">W</div>
+        <div class="acc-details">
+          <p class="acc-name">Wail Gabr</p>
+          <p class="acc-email">wailgabr134@gmail.com</p>
+        </div>
+      </div>
+      <div class="account-item" onclick="selectAccount('aimanqaid123@gmail.com', 'Aiman Qaid')">
+        <div class="avatar" style="background:#4285f4;">A</div>
+        <div class="acc-details">
+          <p class="acc-name">Aiman Qaid</p>
+          <p class="acc-email">aimanqaid123@gmail.com</p>
+        </div>
+      </div>
+      <div class="add-account" onclick="addNewAccount()">
+        <span class="icon-add">👤</span> استخدام حساب آخر
+      </div>
+    </div>
+    <div style="font-size:12px; color:#5f6368; text-align:right;">
+      قبل استخدام هذا التطبيق، يمكنك مراجعة <a href="#" style="color:#0b57d0;text-decoration:none;">سياسة الخصوصية وبنود الخدمة</a>.
+    </div>
+  </div>
+
+  <!-- Step 2: Consent Permissions -->
+  <div class="card consent-view" id="step2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="logo" style="width:36px;height:36px;" alt="Google">
+    <h1 style="font-size:22px; margin-bottom:20px;">التأكد من أنك تثق بهذا التطبيق</h1>
+    <div style="display:flex; justify-content:center; align-items:center; flex-direction:column; margin-bottom:20px;">
+      <p style="font-size:15px; color:#1f1f1f; margin:0 0 10px;">إسلام تيك Platform</p>
+      <div id="consent-email-display" style="font-size:13px; color:#5f6368; background:#f0f4f9; padding:4px 12px; border-radius:12px;"></div>
+    </div>
+    <p style="font-size:14px; color:#444746; text-align:right; line-height:1.6; border-top:1px solid #eee; padding-top:20px;">
+      عند الضغط على "متابعة"، سيشارك Google اسمك، وعنوان بريدك الإلكتروني، وصورة ملفك الشخصي مع التطبيق. وسيتم تسجيل الدخول لتتمكن من استخدام المميزات الكاملة للمنصة.
+    </p>
+    <div class="actions">
+      <button class="btn btn-cancel" onclick="window.close()">إلغاء</button>
+      <button class="btn btn-confirm" onclick="confirmLogin()">تسجيل الدخول ومتابعة</button>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const provider = urlParams.get('provider') || 'Google';
+    
+    // Simulate Apple optionally
+    if (provider === 'Apple') {
+      document.querySelector('.logo').outerHTML = `<div style="font-size:48px; margin-bottom:16px; color:black;"></div>`;
+      document.querySelector('h1').innerText = "تسجيل الدخول بحساب Apple";
+    }
+
+    let chosenEmail = '';
+    let chosenName = '';
+    
+    function selectAccount(email, name) {
+      chosenEmail = email;
+      chosenName = name;
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+      document.getElementById('consent-email-display').textContent = email;
+    }
+
+    function addNewAccount() {
+      const em = prompt("يرجى إدخال بريدك الإلكتروني للمتابعة:");
+      if(em) selectAccount(em, em.split('@')[0]);
+    }
+
+    function confirmLogin() {
+      const textBtn = document.querySelector('.btn-confirm');
+      textBtn.innerText = "جاري التحقق...";
+      textBtn.style.opacity = "0.7";
+      setTimeout(() => {
+        if(window.opener) {
+          window.opener.handleAuthPopupResult(true, chosenEmail, provider);
+          window.close();
+        }
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

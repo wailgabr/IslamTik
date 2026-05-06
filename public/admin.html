@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - IslamTok Admin</title>
+  <link rel="icon" type="image/svg+xml" href="/deentok-icon.svg" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+    body { background: #0d1117; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+    .container {
+      background: #161b22;
+      padding: 36px 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 460px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(0,210,106,0.15);
+      border: 1px solid #30363d;
+    }
+    h2 { text-align: center; font-size: 1.5rem; margin-bottom: 8px;
+      background: linear-gradient(135deg, #00d26a, #ffd700);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 28px; }
+    .form-group { margin-bottom: 18px; }
+    label { display: block; margin-bottom: 6px; font-size: 0.9rem; color: #c9d1d9; font-weight: 500; }
+    input, textarea, select {
+      width: 100%; padding: 12px 14px; background: #0d1117; border: 1.5px solid #30363d;
+      color: white; border-radius: 12px; font-size: 0.95rem; font-family: 'Tajawal', sans-serif;
+      transition: all 0.3s; outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #00d26a; box-shadow: 0 0 0 3px rgba(0,210,106,0.2);
+    }
+    input::placeholder, textarea::placeholder { color: #484f58; }
+    select option { background: #161b22; }
+    button {
+      width: 100%; padding: 14px; background: linear-gradient(135deg, #00d26a, #00e876);
+      color: #0d1117; border: none; font-weight: 700; font-size: 1.05rem; border-radius: 12px;
+      cursor: pointer; transition: all 0.3s; font-family: 'Tajawal', sans-serif;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,210,106,0.3); }
+    button:active { transform: translateY(0); }
+    .status { margin-top: 16px; text-align: center; font-size: 0.9rem; min-height: 24px; transition: all 0.3s; }
+    .back-link { display: block; text-align: center; margin-top: 20px; color: #8b949e; font-size: 0.85rem; text-decoration: none; }
+    .back-link:hover { color: #00d26a; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>➕ إضافة مقطع ديني جديد</h2>
+  <p class="subtitle">أضف مقاطع من أي منصة لمشاركتها مع المسلمين</p>
+
+  <div class="form-group">
+    <label>رابط الفيديو (.mp4)</label>
+    <input type="url" id="videoUrl" placeholder="https://example.com/video.mp4" required>
+  </div>
+  <div class="form-group">
+    <label>اسم الناشر</label>
+    <input type="text" id="videoAuthor" placeholder="@islamic_channel" required>
+  </div>
+  <div class="form-group">
+    <label>المصدر / المنصة</label>
+    <select id="videoSource">
+      <option value="deentok" data-i18n="source_islamtok">🌙 إسلام تيك</option>
+      <option value="youtube">▶️ يوتيوب</option>
+      <option value="instagram">📸 إنستغرام</option>
+      <option value="tiktok">🎵 تيك توك</option>
+
+      <option value="twitter">🐦 تويتر</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>وصف الفيديو والهاشتاجات</label>
+    <textarea id="videoDesc" rows="3" placeholder="تلاوة خاشعة #قرآن..." required></textarea>
+  </div>
+  <button id="submitBtn">إضافة الفيديو للمنصة</button>
+  <div class="status" id="statusMsg"></div>
+  <a href="/" class="back-link">← العودة إلى المنصة</a>
+</div>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', async () => {
+    const url = document.getElementById('videoUrl').value;
+    const author = document.getElementById('videoAuthor').value;
+    const description = document.getElementById('videoDesc').value;
+    const source = document.getElementById('videoSource').value;
+    const statusMsg = document.getElementById('statusMsg');
+
+    if(!url || !author || !description) {
+      statusMsg.style.color = "#ff4757";
+      statusMsg.innerText = "يرجى تعبئة جميع الحقول.";
+      return;
+    }
+
+    statusMsg.style.color = "#8b949e";
+    statusMsg.innerText = "جاري الإرسال...";
+    try {
+      const res = await fetch('http://localhost:3000/api/videos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url, author, description, source, platform: source })
+      });
+      if(res.ok) {
+        statusMsg.style.color = "#00d26a";
+        statusMsg.innerText = "✅ تم إضافة الفيديو بنجاح! راجع المنصة الآن.";
+        document.getElementById('videoUrl').value = '';
+        document.getElementById('videoAuthor').value = '';
+        document.getElementById('videoDesc').value = '';
+      }
+    } catch(err) {
+      statusMsg.style.color = "#ff4757";
+      statusMsg.innerText = "❌ حدث خطأ. تأكد من أن سيرفر البيانات يعمل (node server.js).";
+    }
+  });
+</script>
+</body>
+</html>
