@@ -1,0 +1,14 @@
+# ============================================
+# ⚠️ هذا ملف مثال - لا ترفعه لـ git!
+# انسخه كـ gradle.properties في مجلد android/
+# ⚠️ لا تستخدم مسافات في القيم
+# ============================================
+
+# مسار ملف keystore
+KEYSTORE_PATH=/home/aimanqaid/keystores/islamtok-release.jks
+
+# كلمة مرور keystore (نفسها للمخزن والمفتاح)
+KEYSTORE_PASS=CHANGE_ME_TO_YOUR_SECURE_PASSWORD
+
+# Alias (اختياري - القيمة الافتراضية: islamtok-key)
+KEYSTORE_ALIAS=islamtok-key

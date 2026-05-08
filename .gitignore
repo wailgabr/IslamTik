@@ -23,3 +23,35 @@ dist-ssr
 *.sln
 *.sw?
 android/local.properties
+
+# حماية الملفات الحساسة للإنتاج
+.env
+.env.production
+android/gradle.properties
+android/app/*.jks
+keystores/
+*.jks
+
+# ملفات قاعدة البيانات
+*.db
+*.db-shm
+*.db-wal
+database.sqlite
+
+# ملفات مؤقتة
+temp.js
+test.js
+merge.js
+merge.cjs
+admin_script.js
+admin_template.html
+
+# ملفات ثنائية
+cloudflared
+public/IslamTok.apk
+IslamTok.apk
+*.apk
+
+# رفع المستخدمين
+uploads/
+processed/

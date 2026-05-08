@@ -35,7 +35,17 @@
         </provider>
     </application>
 
-    <!-- Permissions -->
-
+    <!-- Permissions: المطلوبة للتطبيق -->
+    <!-- اتصال بالشبكة لتحميل الفيديوهات وإرسال الرفع -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- التحقق من حالة الشبكة قبل الرفع -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- قراءة ملفات الفيديو من ذاكرة الجهاز للرفع (أندرويد 12-)
+         ملاحظة: READ_EXTERNAL_STORAGE deprecated في أندرويد 13+ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <!-- أندرويد 13+: إذن مخصص لقراءة ملفات الفيديو فقط -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <!-- الكاميرا للتسجيل المباشر -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
 </manifest>

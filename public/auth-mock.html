@@ -108,12 +108,34 @@
       const textBtn = document.querySelector('.btn-confirm');
       textBtn.innerText = "جاري التحقق...";
       textBtn.style.opacity = "0.7";
-      setTimeout(() => {
-        if(window.opener) {
-          window.opener.handleAuthPopupResult(true, chosenEmail, provider);
-          window.close();
+      
+      const name = chosenEmail.split('@')[0];
+      fetch('/api/social-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ provider: provider, email: chosenEmail, name: name })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          localStorage.setItem('deentok_user', JSON.stringify(Object.assign({}, data.user, { token: data.token })));
+          if(window.opener) {
+            window.opener.location.reload();
+            window.close();
+          } else {
+            window.location.href = '/';
+          }
+        } else {
+          textBtn.innerText = "تسجيل الدخول ومتابعة";
+          textBtn.style.opacity = "1";
+          alert(data.error || 'فشل التوثيق');
         }
-      }, 1200);
+      })
+      .catch(err => {
+        textBtn.innerText = "تسجيل الدخول ومتابعة";
+        textBtn.style.opacity = "1";
+        alert('فشل الاتصال بالخادم');
+      });
     }
   </script>
 </body>

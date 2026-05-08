@@ -16,8 +16,22 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // ============================================
+    // ⚠️ إعدادات التوقيع الرقمي للإنتاج
+    // كلمات المرور تُقرأ من متغيرات البيئة وليس من الملف
+    // تمريرها عبر Gradle: ./gradlew -PKEYSTORE_PASS=xxx assembleRelease
+    // ============================================
+    signingConfigs {
+        release {
+            storeFile file(System.getenv('KEYSTORE_PATH') ?: '/home/aimanqaid/keystores/islamtok-release.jks')
+            storePassword System.getenv('KEYSTORE_PASS') ?: project.findProperty('KEYSTORE_PASS') ?: ''
+            keyAlias System.getenv('KEYSTORE_ALIAS') ?: 'islamtok-key'
+            keyPassword System.getenv('KEYSTORE_PASS') ?: project.findProperty('KEYSTORE_PASS') ?: ''
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

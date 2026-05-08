@@ -1,5 +1,15 @@
 {
   "appId": "com.islamtok.app",
-  "appName": "IslamTok",
-  "webDir": "dist"
+  "appName": "إسلام تيك",
+  "webDir": "./public",
+  "server": {
+    "url": "https://robots-devoted-groundwater-ultra.trycloudflare.com",
+    "allowNavigation": ["*.trycloudflare.com", "*.onrender.com", "*.fly.dev", "*.railway.app"],
+    "logging": false,
+    "cleartext": false
+  },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1500, "backgroundColor": "#000000", "showSpinner": false, "autoHide": true },
+    "Keyboard": { "resize": "body" }
+  }
 }

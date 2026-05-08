@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/><title>جاري تسجيل الدخول...</title></head>
+<body style="background:#0d1117;color:#fff;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;flex-direction:column">
+  <div style="font-size:3rem;margin-bottom:20px">⏳</div>
+  <p style="color:#8b949e">جاري تسجيل الدخول تلقائياً...</p>
+  <script>
+    const userData = {"id":2,"username":"وائل","email":"wailgabr155@gmail.com","role":"admin","created_at":"2026-05-07 10:38:02","avatar":"https://ui-avatars.com/api/?name=%D9%88%D8%A7%D8%A6%D9%84&background=00d26a&color=fff&bold=true"};
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ3YWlsZ2FicjE1NUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzgyNTI0MTUsImV4cCI6MTc3ODg1NzIxNX0.FV4ELsUn5Y4_YoFj0BW3RQApbLkbp28UL8OZPHEVjFg";
+    localStorage.setItem('deentok_user', JSON.stringify({ ...userData, token }));
+    setTimeout(() => { window.location.href = '/'; }, 500);
+  </script>
+</body>
+</html>
