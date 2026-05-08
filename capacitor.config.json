@@ -3,8 +3,8 @@
   "appName": "إسلام تيك",
   "webDir": "./public",
   "server": {
-    "url": "https://robots-devoted-groundwater-ultra.trycloudflare.com",
-    "allowNavigation": ["*.trycloudflare.com", "*.onrender.com", "*.fly.dev", "*.railway.app"],
+    "url": "https://islamtok.onrender.com",
+    "allowNavigation": ["*.onrender.com", "*.trycloudflare.com", "*.fly.dev", "*.railway.app"],
     "logging": false,
     "cleartext": false
   },
