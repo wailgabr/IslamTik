@@ -9,8 +9,8 @@ import xss from 'xss';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import multer from 'multer';
-import Database from 'better-sqlite3';
 import dotenv from 'dotenv';
+import { getDB } from './src/db.js';
 import { exec } from 'child_process';
 import crypto from 'crypto';
 
@@ -31,23 +31,22 @@ const PORT = 3000;
 app.use(express.json({ limit: '20mb' }));
 app.use(express.urlencoded({ extended: true, limit: '20mb' }));
 
-// 2. إعداد قاعدة بيانات SQLite صلبة بدلاً من JSON
+// 2. إعداد قاعدة بيانات SQLite
 const DB_FILE = path.join(__dirname, 'islamtok.db');
-const db = new Database(DB_FILE, { verbose: null });
-db.pragma('journal_mode = WAL');
+const db = await getDB(DB_FILE);
 
-// إنشاء/ترقية الجداول الأساسية
 db.exec(`
-  CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    role TEXT DEFAULT 'user',
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
+    PRAGMA journal_mode=WAL;
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username TEXT NOT NULL,
+      email TEXT UNIQUE NOT NULL,
+      password TEXT NOT NULL,
+      role TEXT DEFAULT 'user',
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
 
-  CREATE TABLE IF NOT EXISTS videos (
+    CREATE TABLE IF NOT EXISTS videos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     url TEXT NOT NULL,
