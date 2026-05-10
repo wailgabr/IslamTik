@@ -11,7 +11,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "islamtok-db"
-database_id = ""
+database_id = "997bb6c4-8e63-4c60-81aa-92e783084e88"
 
 # ========================================
 # إنشاء مخزن R2 (شغّل الأمر مرة واحدة):

@@ -7,16 +7,10 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "npx wrangler dev",
-    "deploy": "npx wrangler deploy",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "node server.js"
   },
   "devDependencies": {
-    "@capacitor/cli": "^8.3.1",
-    "vite": "^8.0.10",
-    "wrangler": "^4.90.0"
+    "@capacitor/cli": "^8.3.1"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",
@@ -27,7 +21,6 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.0",
     "helmet": "^8.1.0",
-    "hono": "^4.12.18",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.1.1",
     "sql.js": "^1.14.1",
