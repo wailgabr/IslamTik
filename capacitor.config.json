@@ -3,7 +3,7 @@
   "appName": "إسلام تيك",
   "webDir": "./public",
   "server": {
-    "url": "https://islamtok.onrender.com",
+    "url": "https://dpfhk-150-228-11-241.run.pinggy-free.link",
     "allowNavigation": ["*.onrender.com", "*.trycloudflare.com", "*.fly.dev", "*.railway.app"],
     "logging": false,
     "cleartext": false
